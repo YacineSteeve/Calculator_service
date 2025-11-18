@@ -14,11 +14,9 @@ spec:
       labels:
         app: sum
     spec:
-      imagePullSecrets:
-      - name: repo-key
       containers:
       - name: sumserver
-        image: yxos/sum
+        image: mblyweer/sum
         imagePullPolicy: Always
         ports:
         - containerPort: 80
@@ -55,11 +53,9 @@ spec:
       labels:
         app: sub
     spec:
-      imagePullSecrets:
-        - name: repo-key
       containers:
       - name: subserver
-        image: yxos/sub
+        image: mblyweer/sub
         imagePullPolicy: Always
         ports:
         - containerPort: 80
@@ -96,11 +92,9 @@ spec:
       labels:
         app: mul
     spec:
-      imagePullSecrets:
-        - name: repo-key
       containers:
       - name: mulserver
-        image: yxos/mul
+        image: mblyweer/mul
         imagePullPolicy: Always
         ports:
         - containerPort: 80
@@ -137,11 +131,9 @@ spec:
       labels:
         app: div
     spec:
-      imagePullSecrets:
-        - name: repo-key
       containers:
       - name: divserver
-        image: yxos/div
+        image: mblyweer/div
         imagePullPolicy: Always
         ports:
         - containerPort: 80
@@ -178,11 +170,9 @@ spec:
       labels:
         app: calculator
     spec:
-      imagePullSecrets:
-        - name: repo-key
       containers:
       - name: calculatorserver
-        image: yxos/calculator
+        image: mblyweer/calculator
         imagePullPolicy: Always
         ports:
         - containerPort: 80
